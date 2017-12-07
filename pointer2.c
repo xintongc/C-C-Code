@@ -1,7 +1,28 @@
 
 #include <stdio.h>
 
+bool twoStrCompr(char *str1[], char *str2[]){
+
+    int v = strcmp(str1, str2);
+    if(v < 0){
+        return true;
+    } else {
+        return false;
+    }
+}
+
 int main() {
+    
+    bool result = twoStrCompr("fgbc","fdfd");
+
+    if(result){
+        printf("True");
+    } else{
+        printf("false");
+    }
+    
+    
+    
 
     int n1 = 3;
     int n2 = 4;
