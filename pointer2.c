@@ -93,3 +93,54 @@ int main() {
 
     return 0;
 }
+
+int main() {
+
+    int a = 0, b = 0;
+    int *p1 = NULL, *p2 = NULL;
+    int *temp = NULL;
+
+    printf("input a:");
+    scanf("%d",&a);
+
+    printf("input b:");
+    scanf("%d",&b);
+
+    p1 = &a;
+    p2 = &b;
+
+    if(*p1 < * p2)
+    {
+        temp = p1;
+        p1 = p2;
+        p2 = temp;
+    }//交换的是指针，*p1指向b，*p2指向a
+
+    printf("max is %d\n", *p1);
+    printf("min is %d", *p2);
+
+
+    return 0;
+}
+
+
+int main() {
+
+    int a[5] = {10,11,12,13,14};
+    int *pointer = NULL;
+    printf("%pointer\n",a);
+
+    pointer = a; //相当于 pointer = &a[0];
+
+    printf("%pointer\n",pointer);
+    printf("%d\n",*pointer);
+    printf("%d\n",*pointer++); //打印a[0];虽然从右往左执行，++等级更高，但后置++的含义是先使用前面的变量，然后再++
+    printf("%d\n",*pointer++); //打印a[1]; 打印完后，指针指向了a[2];
+
+    //pointer + i 等价于 a+i，等价于&a[i]
+    //*(pointer + i) 等价于 *(a+i) 等价于 a[i]
+    //pointer[i] 等价于 *(pointer + i)
+
+    return 0;
+}
+
