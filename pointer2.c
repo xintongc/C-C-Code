@@ -144,3 +144,21 @@ int main() {
     return 0;
 }
 
+
+int main() {
+
+    int a[3], i, *p = a;
+    for (i = 0; i < 3; ++i) {
+        printf("input a[");
+        printf("%d",i);
+        puts("]");
+
+        scanf("%d",p++);
+    }
+
+    for (p--; p >=a ;) {
+        printf("%d\n",*p--);
+    }
+    return 0;
+}
+
