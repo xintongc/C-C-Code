@@ -162,3 +162,51 @@ int main() {
     return 0;
 }
 
+
+int main() {
+//reverse an array by pointer
+    int a[5], *p = NULL, *q = NULL, temp;
+
+    for(p = a; p < a + 5; p++){
+        scanf("%d",p);
+    }
+
+    for (p = a, q = a + 4; p < q; p++, q--) {
+        temp = *p;
+        *p = *q;
+        *q = temp;
+    }
+
+    for(p = a; p < a + 5; p++){
+        printf("%d\n",*p);
+    }
+
+    return 0;
+}
+
+
+int main() {
+//print 2D array
+    int a[3][4] = {1,3,5,7,9,11,13,15,17,19,21,23};
+    int *p;
+
+    for(p = a; p < &a[0][0] + 12; p++){
+        printf("%d\n",*p);
+    }
+    return 0;
+}
+
+int main() {
+
+    int a[3][4] = {1,3,5,7,9,11,13,15,17,19,21,23};
+    int (*p)[4], i, j; //p指向4个int型元素的一维数组 的指针变量
+    p = a;
+    scanf("%d",&i);
+    scanf("%d",&j);
+
+
+    printf("%d\n",*(*(p+i)+j));
+    printf("%d\n",p[i][j]); //same as above
+
+    return 0;
+}
