@@ -46,7 +46,18 @@ coordinate p1 = {0, 0};
 coordinate p2 = {.x = 1, .y = 3};
 
 
+*(p +1)  the position that pointer point move one
+*p + 1:  the value the pointer point add 1
 
+In C, parameter in function is pass by value, even for array.
+
+if the function return boolean, then the type of the pointer is int
+
+function take pointer as para—> pass by reference
+
+
+In C
+we create a pointer, it point to heap, we need to clean it.
 
 
 
