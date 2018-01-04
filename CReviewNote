@@ -1,0 +1,61 @@
+Global variables have default initializations, whereas local variables do not.
+
+extern:     Variable/function is defined outside of current file. 
+(blank):     Variable/function is defined in current file and visible outside. 
+static:       Variable/function is visible only in current file.
+
+运算优先级
+后置++ --
+前置 ++ --          逻辑非 !   *  &    （同级一起，从右往左到结合顺序，就近原则）
+算术运算符
+关系运算符
+&&  ||
+赋值运算符
+
+&*pointer = &(*pointer)
+*&a = *(&a)
+*pointer++ = *(pointer++)
+
+数组名相当于指向数组第一个元素的指针，但数组名不是变量，不能被赋值
+
+
+A pointer can also refer to a function, since functions have addresses.
+We refer to these as function pointers. 
+Consider the following (rather cryptic) declaration: 
+long (*ptr)(int);
+
+
+
+
+struct coordinate { 
+float x; 
+float y; 
+};
+struct coordinate p;
+
+
+typedef struct { 
+float x;
+ float y; 
+} coordinate;
+
+coordinate p;
+
+initialize:
+coordinate p1 = {0, 0};
+coordinate p2 = {.x = 1, .y = 3};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
