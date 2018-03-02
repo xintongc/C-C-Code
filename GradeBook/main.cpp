@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
 
-    GradeBook book1 = new GradeBook();
+    GradeBook* book1 = new GradeBook();
 
     return 0;
 }
